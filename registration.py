@@ -11,11 +11,28 @@ CAMPO_REGISTRAZIONE = [
     "Cognome",
     "Nazione",
     "Citta",
-    "CAP",
+    "Cap",
     "Telefono",
     "Email",
 ]
 # - Creazione delle classi
+
+class Utenti:
+
+    def __init__(self, username, password, conferma_password, nome, cognome, nazione, citta, cap, telefono, email):
+        self.username = username.lower().strip()
+        self.password = password
+        self.conferma_password = conferma_password
+        self.nome = nome.strip().title()
+        self.cognome = cognome.strip().title()
+        self.nazione = nazione.strip().title()
+        self.citta = citta.strip().title()
+        self.cap = cap.strip().title()
+        self.telefono = telefono.strip()
+        self.email = email.lower().strip()
+        
+        pass 
+
 
 # Creazione di dati identificativi e quindi input utente
 
