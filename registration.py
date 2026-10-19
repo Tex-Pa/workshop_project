@@ -15,6 +15,8 @@ CAMPO_REGISTRAZIONE = [
     "Telefono",
     "Email",
 ]
+
+
 # - Creazione delle classi
 
 class Utenti:
@@ -36,6 +38,23 @@ class Utenti:
 
 # Creazione di dati identificativi e quindi input utente
 
+# Apro la funzione utenti_input per permettere all'utente di digitare i campi
+def utenti_input():
+
+    # apro il dictionary per trasportare i dati della lista chiamata all'inizio in questa funzione
+    dati_utente = {}
+   
+    # Apro il ciclo per permettere al programma di rimanere qui dentro fino a che non finiamo le nostre operazioni
+    # Con CAMPO_REGISTRAZIONE porto la lista
+    for campo in CAMPO_REGISTRAZIONE:
+       
+        #creo una variabile e collego ad esso la lista per inserire il tutto
+        dati_utente[campo]= input(f"Inserisci {campo}: ")
+    
+    #riporto i dati ottenuti allinterno della classe Utenti
+    return Utenti(**dati_utente)
+
+
 # - Creazione degli input e pulirli consecutivamente
 
 # Creazione degli errori
@@ -47,3 +66,4 @@ class Utenti:
 # - Creazione e lettura file e salvataggio in database
 
 # esci dalla pagina
+pass
