@@ -49,7 +49,7 @@ def utenti_input():
     for campo in CAMPO_REGISTRAZIONE:
        
         #creo una variabile e collego ad esso la lista per inserire il tutto
-        dati_utente[campo]= input(f"Inserisci {campo}: ")
+        dati_utente[campo.lower()] = input(f"Inserisci {campo}: ")
     
     #riporto i dati ottenuti allinterno della classe Utenti
     return Utenti(**dati_utente)
@@ -67,3 +67,12 @@ def utenti_input():
 
 # esci dalla pagina
 pass
+
+# esci dalla pagina
+nuovo_utente = utenti_input()
+
+# Stampiamo alcuni dati per verificare che la pulizia e l'inserimento abbiano funzionato
+print("\n--- Utente Registrato Correttamente ---")
+print(f"Username: {nuovo_utente.username}")
+print(f"Nome: {nuovo_utente.nome}")
+print(f"Email: {nuovo_utente.email}")
